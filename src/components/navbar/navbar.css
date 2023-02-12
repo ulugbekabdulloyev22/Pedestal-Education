@@ -1,0 +1,212 @@
+.navbar__container {
+  width: 100%;
+  height: 100px;
+  padding: 0 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: #273c7542;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow: hidden; */
+}
+
+.navbar__container .logo img {
+  width: 160px;
+  height: 160px;
+  margin: 10px 15px 0 0;
+}
+
+.navbar__container ul {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__container ul li {
+  height: 90px;
+  margin: 0 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__container ul li .li__icon {
+  display: none;
+  transition: 0.5s;
+  color: var(--bg-mazarine-blue);
+}
+
+.navbar__container ul li a {
+  color: var(--color-white);
+  /* font-family: 'Sevillana', cursive; */
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.navbar__container ul li:hover a {
+  transform: translateY(-10px);
+}
+
+.navbar__container .nav__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__container .nav__icons .nav__menu {
+  display: none;
+}
+
+.navbar__container .nav__icons .nav__number {
+  /* border: var(--border-1); */
+  display:  flex;
+  padding: 8px 18px;
+  margin-left: 12px;
+  letter-spacing: 1px;
+  color: var(--color-white);
+  border-radius: 10px;
+  background-color: #716fd36e;
+  backdrop-filter: blur(5px);
+}
+
+.navbar__container .nav__icons .nav__phone {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.navbar__container .nav__icons .nav__number:hover .nav__phone {
+  animation: shake-lr 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+@media screen and (min-width: 1300px) {
+  .navbar__container {
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+
+  .navbar__container ul li {
+    margin: 0 25px;
+  }
+
+  .navbar__container ul li a {
+    font-size: 15px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .navbar__container .logo img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .navbar__container ul li {
+    margin: 0 10px;
+  }
+
+  .navbar__container ul li a {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .navbar__container .nav__icons .nav__number {
+    padding: 6px 12px;
+    margin-left: 10px;
+    letter-spacing: 0.5;
+  }
+
+  .navbar__container .nav__icons .nav__phone {
+    font-size: 15px;
+    margin-right: 7px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .navbar__container .nav__icons .nav__number i {
+    display: none;
+  }
+
+  .navbar__container .nav__icons .nav__phone {
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .navbar__container {
+    justify-content: space-between;
+  }
+
+  .navbar__container .box {
+    width: 100%;
+    height: 100vh;
+    /* border: var(--border-1); */
+    position: fixed;
+    top: 100px;
+    right: 0;
+    z-index: 99;
+  }
+
+  .navbar__container ul {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom-left-radius: 15px;
+    background-color: var(--bg-pico-void);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 20px;
+    transition: all .5s ease;
+    /* animation: slide-out-elliptic-right-bck 0.7s ease-in both; */
+    /* transform: translate(100rem); */
+  }
+
+  .navbar__container .box.active {
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  }
+
+  .navbar__container .box.exits {
+    animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  }
+
+  .navbar__container ul li a {
+    font-size: 14px;
+  }
+
+  .navbar__container ul li:hover a {
+    transform: translateX(30px);
+  }
+
+  .navbar__container ul li:hover .li__icon {
+    display: block;
+  }
+
+  .navbar__container .nav__icons .nav__menu {
+    display: block;
+    margin: 0 15px;
+    padding: 6px 12px;
+    color: var(--color-white);
+    border-radius: 10px;
+    background-color: #716fd36e;
+    backdrop-filter: 5px;
+  }
+
+  .navbar__container .nav__icons .nav__menu .meda-icon {
+    height: 20px;
+    display: none;
+    font-size: 17px;
+  }
+
+  .navbar__container .nav__icons .nav__menu .meda-icon.active {
+    display: block;
+  }
+}

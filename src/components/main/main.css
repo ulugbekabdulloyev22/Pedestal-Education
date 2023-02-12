@@ -1,0 +1,119 @@
+.main__container {
+  /* border: var(--border-1); */
+  width: 100%;
+  min-height: 100vh;
+  font-size: 1.5rem;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main__container .main__content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  color: var(--color-white);
+}
+
+.main__content .main__title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.main__title,
+.main__description {
+  background: linear-gradient(to left, #fc00ff, #00dbde) repeat-y;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main__btn {
+  position: relative;
+  background: linear-gradient(to right, #fc00ff, #00dbde);
+  color: #fc00ff;
+  backdrop-filter: blur(5px);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  padding: 15px 50px;
+  transition: 0.5s;
+  margin-top: 30px;
+}
+
+.main__btn:hover {
+  background: #1e9bff;
+  color: #1e9bff;
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 35px #1e9bff;
+}
+
+.main__btn::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+
+.main__btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.main__btn i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.main__btn i::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translateX(-50%) scaleX(325deg);
+  transition: 0.5s;
+}
+
+.main__btn:hover i::before {
+  width: 20px;
+  left: 20%;
+}
+
+.main__btn i::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 10px;
+  height: 4px;
+  background: #27282c;
+  transform: translateX(-50%) scaleX(325deg);
+  transition: 0.5s;
+}
+
+.main__btn:hover i::after {
+  width: 20px;
+  left: 80%;
+}
+
+@media screen and (max-width:685px) {
+  .main__container .main__content .main__title{
+    font-size: 2.45rem;
+  }
+
+    .main__container .main__content .main__description{
+      font-size: 25px;
+    }
+}

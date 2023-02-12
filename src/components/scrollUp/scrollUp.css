@@ -1,0 +1,14 @@
+.scroll__container {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    cursor: pointer;
+    background-color: var(--bg-pico-void);
+    padding: 10px 15px;
+    color: var(--color-white);
+    font-size: 22px;
+    transition: .5s;
+    transform: translate(100px, 100px);
+    z-index: 90;
+}

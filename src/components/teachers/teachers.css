@@ -1,0 +1,186 @@
+.teachers__container {
+  /* border: var(--border-1); */
+  width: 100%;
+  min-height: 500px;
+  background: var(--bg-pico-black);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 25px;
+}
+
+.teachers__container .teachers__title {
+  padding: 20px;
+  color: var(--color-white);
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, var(--gradint-red-blue)) repeat;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+/* .slick-next::before {
+  display: none !important;
+} */
+
+.teachers__container .teachers__content {
+  border: inherit;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+.teachers__container .teachers__content .teachers__card {
+  /* border: var(--border-1); */
+  /* width: 300px !important; */
+  min-height: 400px !important;
+  overflow: hidden;
+  padding: 15px;
+  cursor: pointer;
+  /* margin: 10px !important; */
+}
+
+.teachers__container .teachers__content .teachers__card .teacher__img {
+  width: 100%;
+  background: var(--bg-mazarine-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.teachers__container .teachers__content .teachers__card .teacher__img img {
+  width: 200px;
+  height: 350px;
+  object-fit: cover;
+  transition: all 0.3s;
+}
+
+.teachers__container .teachers__content .teachers__card .teacher__img:hover img {
+  transform: scale(1.08);
+}
+
+.teachers__container .teachers__content .teachers__card .teachers__name {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  letter-spacing: 1.5px;
+}
+
+.teachers__container .teachers__content .teachers__card .teachers__name::before {
+  content: "";
+  padding: 3px;
+  margin-right: 10px;
+  background: var(--bg-mazarine-blue);
+}
+
+.teachers__container .teachers__description {
+  /* border: var(--border-1); */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #192a5634;
+  backdrop-filter: blur(7px);
+}
+
+.teachers__container .teachers__description .tech-box {
+  border: inherit;
+  width: 600px;
+  min-height: 300px;
+  color: var(--color-white);
+  padding: 30px 35px;
+  margin: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.4;
+  background: #192a56;
+  position: relative;
+}
+
+.teachers__container .teachers__description .tech-box .teachers__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  transition: 0.2s;
+  padding: 2px;
+  background: #f74a4a;
+}
+
+.teachers__container .teachers__description .tech-box .teachers__close:hover {
+  background: #ff0000;
+}
+
+.teachers__container .teachers__description .tech-box ul li {
+  line-height: 2.5;
+  font-family: sans-serif;
+}
+
+.teachers__container .teachers__description .tech-box ul li b {
+  color: #8785f5;
+}
+
+.teachers__container .teachers__description .tech-box ul li::before {
+  content: " - ";
+  color: #8785f5;
+}
+
+.slick-dots {
+  bottom: -15px;
+}
+
+.slick-dots li button:before {
+  font-size: 11px;
+  color: var(--red-orange);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--red-orange);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .teachers__container .teachers__content .teachers__card .teacher__img img {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .teachers__container .teachers__content .teachers__card .teacher__img img {
+    width: 200px;
+  }
+}
+
+/* .teachers__container .slick-arrow {
+} */
+
+.teachers__container .slick-arrow::before {
+  font-size: 28px;
+  color: var(--bg-mazarine-blue);
+}
+
+.teachers__container .slick-prev {
+  margin: 0 0 0 10px;
+}
+
+.teachers__container .slick-next {
+  margin: 0 22px 0 0;
+}

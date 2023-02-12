@@ -1,0 +1,209 @@
+.prices__container {
+    /* border: var(--border-1); */
+    width: 100%;
+    min-height: 500px;
+    background: var(--bg-pico-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 0 0 0;
+    overflow: hidden;
+}
+
+.prices__container .prices__title {
+    padding: 20px;
+    color: var(--text-color);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(to left, var(--gradint-red-blue)) repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.prices__container .prices__content {
+    border: inherit;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.prices__container .prices__content .prices__data {
+    border: inherit;
+    width: 100%;
+    min-height: 400px;
+}
+
+.prices__container .prices__content .prices__data .prices__menu {
+    border: inherit;
+    width: 100%;
+    min-height: 40px;
+
+}
+
+.prices__data .prices__menu button {
+    width: 50%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    border: none;
+    padding: 5px;
+    background: var(--bg-mazarine-blue);
+    color: var(--color-white);
+}
+
+.prices__data .prices__menu button.active {
+    background: var(--bg-pico-void);
+    text-align: center;
+    background: linear-gradient(to left, var(--gradint-red-blue)) repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid var(--bg-mazarine-blue);
+}
+
+.prices__data .prices__description {
+    width: 100%;
+    min-height: 100px;
+    color: white;
+    /* border: var(--border-1); */
+}
+
+.prices__data .prices__description .prices__card {
+    border: inherit;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.prices__card ul {
+    width: 100%;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 15px;
+}
+
+.prices__card ul::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--bg-mazarine-blue);
+}
+
+.prices__card ul li {
+    position: relative;
+    font-size: 18px;
+    margin: 5px 0;
+
+}
+
+.prices__card ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-29px, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--bg-mazarine-blue);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.prices__card ul li:nth-child(8) {
+    /* border: 1px solid red; */
+    font-size: 18px;
+    margin-top: 30px;
+    width: 60%;
+    padding: 15px 30px;
+    font-weight: bold;
+    color: var(--color-white);
+    background: var(--bg-mazarine-blue);
+    border-radius: 5px;
+}
+
+.prices__card ul li:nth-child(8) i{
+    font-size: 16px;
+}
+
+.prices__card ul li:nth-child(8)::after{
+    content: '';
+    position: absolute;
+    top: 80%;
+    left: 25px;
+    background: var(--bg-pico-black);
+    width: 70%;
+    height: 3px;
+}
+
+.prices__card img {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 950px) {
+    .prices__card ul li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .prices__card ul li {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .prices__card img {
+        width: 50%;
+    }
+
+    .prices__data .prices__menu button {
+        font-size: 16px;
+
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .prices__card {
+        flex-direction: column;
+    }
+
+    .prices__card ul {
+        width: 100%;
+    }
+
+    .prices__card ul li {
+        font-size: 15.5px;
+    }
+
+    .prices__card img {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .prices__data .prices__menu button {
+        font-size: 12px;
+    }
+
+    .prices__card ul li:nth-child(8){
+        width: 100%;
+        font-size: 20px;
+    }
+}

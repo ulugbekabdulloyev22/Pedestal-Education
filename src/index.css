@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto";
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* Backraund colors */
+  --bg-mazarine-blue: #273c75;
+  --bg-pico-void: #192a56;
+  --bg-pico-black: #141c27;
+
+  /* Border */
+  --border-1: 1px solid red;
+
+  /* Color  */
+  --color-white: #f5f6fa;
+  --red-orange: #706fd3;
+  --gradint-red-blue: #fc00ff, #00dbde;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.const {
+  margin-top: 100px;
+}

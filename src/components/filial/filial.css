@@ -1,0 +1,150 @@
+.filial__container {
+    /* border: var(--border-1); */
+    width: 100%;
+    min-height: 300px;
+    background-color: var(--bg-pico-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.filial__container .filial__content {
+    border: inherit;
+    width: 100%;
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filial__container .filial__content .filial__card {
+    border: inherit;
+    width: 100%;
+    min-height: 300px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+.filial__content .filial__card div:nth-child(1) {
+    border: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 30px;
+    font-size: 18px;
+}
+
+.filial__card div:nth-child(1) .filial__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    background: linear-gradient(to left, var(--gradint-red-blue)) repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.filial__card div:nth-child(1) p {
+    margin: 5px 0;
+}
+
+.filial__card .filial__box {
+    border: inherit;
+    margin: 10px;
+    padding-left: 90px;
+    position: relative;
+}
+
+.filial__card .filial__box .map__icon {
+    position: absolute;
+    top: 15px;
+    left: 28px;
+    font-size: 2.5rem;
+    color: var(--bg-mazarine-blue);
+}
+
+.filial__card .filial__box h5 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--bg-mazarine-blue);
+}
+
+.filial__card .filial__box p i:nth-child(1) {
+    color: var(--bg-mazarine-blue);
+    letter-spacing: .05rem;
+}
+
+.filial__container .filial__content .filial__card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+@media screen and (max-width:1030px) {
+    .filial__container .filial__content .filial__card img {
+        width: 40%;
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .filial__content .filial__card div:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .filial__card .filial__box {
+        padding-left: 70px;
+    }
+
+    .filial__card .filial__box .map__icon {
+        font-size: 2.2rem;
+        left: 23px;
+    }
+
+    .filial__card .filial__box h5 {
+        font-size: 1.05rem;
+    }
+
+    .filial__card .filial__box p {
+        font-size: .75rem;
+    }
+
+    .filial__container .filial__content .filial__card img {
+        width: 50%;
+        height: 320px;
+    }
+}
+@media screen and (max-width:750px){
+    .filial__container .filial__content .filial__card{
+        flex-direction: column;
+    }
+
+    .filial__content .filial__card div:nth-child(1){
+        padding: 0;
+    }
+
+    .filial__card .filial__box{
+        margin: 10px 0;
+        padding-left: 50px;
+    }
+
+    .filial__card .filial__box .map__icon{
+        top: 8px;
+        left: 10px;
+
+    }
+
+    .filial__container .filial__content .filial__card img {
+        width: 100%;
+        height: 300px;
+        margin-top: 15px;
+    }
+}

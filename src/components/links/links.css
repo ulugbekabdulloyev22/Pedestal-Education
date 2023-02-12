@@ -1,0 +1,36 @@
+.links__container {
+    position: fixed;
+    top: 35%;
+    right: -110px;
+    font-size: 18px;
+}
+
+.links__container ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+
+    font-size: 18px;
+    transition: .5s;
+}
+
+.links__container ul li:hover {
+    background-color: var(--bg-pico-black);
+    transform: translateX(-110px);
+}
+
+.links__container ul li:hover a {
+    color: var(--red-orange);
+}
+
+.links__container ul li a {
+    color: var(--bg-mazarine-blue);
+    letter-spacing: .1rem;
+    transition: .3s;
+}
+
+.links__container ul li a .icons {
+    font-size: 27px;
+    margin-right: 10px;
+}

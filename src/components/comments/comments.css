@@ -1,0 +1,101 @@
+.comments__container {
+    /* border: var(--border-1); */
+    width: 100%;
+    min-height: 300px;
+    background-color: var(--bg-pico-black);
+    display: block;
+    padding: 15px 25px;
+    overflow: hidden;
+}
+
+.comments__container .comments__title {
+    padding: 20px;
+    color: var(--color-white);
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--gradint-red-blue)) repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+
+.comments__container .comments__content {
+    /* border: inherit; */
+    width: 100%;
+    min-height: 100px;
+
+}
+
+.comments__content .comment {
+    /* border: 1px solid red; */
+    width: 100%;
+    min-height: 200px;
+    padding: 15px 20px;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-white);
+    font-size: 1rem;
+}
+
+.comments__content .comment .box {
+    width: 20%;
+    border: inherit;
+    padding: 15px;
+    margin-left: 5px;
+}
+
+.comments__content .comment .box .user__img {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--red-orange);
+}
+
+.comments__content .slick-arrow{
+    display: none !important;
+}
+
+.comments__content .slick-dots{
+    /* margin-top: 15px !important; */
+    padding-top: 300px;
+}
+
+.comments__content .comment .box .user__img img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.comments__content .comment .box h3 {
+    margin-top: 15px;
+}
+
+.comments__content .comment p {
+    width: 75%;
+}
+
+@media screen and (max-width: 750px) {
+    .comments__content .comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .comments__content .comment .box {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 15px 0;
+    }
+
+    .comments__content .comment p {
+        width: 100%;
+        text-align: center;
+    }
+}
